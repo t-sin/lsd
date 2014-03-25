@@ -11,7 +11,9 @@
   :version "0.1"
   :author "t-sin"
   :license "NYSL"
-  :depends-on (:cl-annot)
+  :depends-on (:cl-annot
+               :unix-options
+               :cl-binary-file-0.4)
   :components (:file "lsd")
   :description "extracting sound from lsd file, for a certain Dojin circle SDK"
   :long-description
