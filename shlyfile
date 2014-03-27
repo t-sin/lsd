@@ -1,0 +1,16 @@
+;; shlyfile for lsd
+
+(load "lsd.asd")
+(ql:quickload :lsd)
+
+;; app name
+(defvar *app-name* "lsd")
+
+;; toplevel function
+(defvar *app-toplevel* #'lsd:app)
+
+;; save application
+(defun save-app ()
+  (ccl:save-application *app-name*
+                        :toplevel-function *app-toplevel*
+                        :prepend-kernel t))
