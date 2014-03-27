@@ -12,9 +12,10 @@
   :author "t-sin"
   :license "NYSL"
   :depends-on (:cl-annot
+               :babel
                :unix-options
                :cl-binary-file-0.4)
-  :components (:file "lsd")
+  :components ((:file "lsd"))
   :description "extracting sound from lsd file, for a certain Dojin circle SDK"
   :long-description
   #.(with-open-file (stream (merge-pathnames
