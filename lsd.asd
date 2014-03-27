@@ -8,7 +8,7 @@
 (in-package :lsd-asd)
 
 (defsystem lsd
-  :version "0.1"
+  :version "1.0"
   :author "t-sin"
   :license "NYSL"
   :depends-on (:cl-annot
