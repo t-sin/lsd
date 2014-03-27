@@ -110,7 +110,7 @@
           (loop for f in files
              do (write-wave f in)))
         ;; (vector name head-bytes data-bytes)
-        (format t "~s is not lsd file.~%" lsdpath))))
+        (format t "~s is not lsd file.~%~%" lsdpath))))
 
 
 (defun check-path (path)
@@ -119,9 +119,11 @@
 
 @export
 (defun lsd (path)
-  (if (check-path path)
-      (write-waves path)
-      (format t "~S is not lsd file.~%~%" path)))
+  (if (null path)
+      (format t "no arguments~%~A~%~%" +usage+)
+      (if (check-path path)
+          (write-waves path)
+          (format t "~S is not lsd file.~%~%" path))))
 
 @export
 (defun app ()
